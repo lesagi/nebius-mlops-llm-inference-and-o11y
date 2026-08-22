@@ -1,0 +1,16 @@
+apiVersion: 1
+
+datasources:
+  - name: Prometheus
+    type: prometheus
+    uid: prometheus
+    access: proxy
+    url: http://prometheus:9090
+    isDefault: true
+    editable: true
+    jsonData:
+      # Must match scrape_interval in infra/prometheus.yml - Grafana derives
+      # $__rate_interval from this, not from Prometheus, so a mismatch silently
+      # mis-sizes every rate window on the dashboard. scripts/phases/phase2.py
+      # asserts the two agree.
+      timeInterval: 15s

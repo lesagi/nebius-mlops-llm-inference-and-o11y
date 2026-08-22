@@ -1,0 +1,1068 @@
+[
+  {
+    "config": {
+      "agent_workers": "4",
+      "cpu_count": "16",
+      "api_server_count": "4",
+      "max_num_seqs": "256",
+      "max_iterations": "3",
+      "schema_values": "off",
+      "label": "workers-4"
+    },
+    "client": {
+      "label": "workers-4",
+      "requested_rps": 10.0,
+      "duration_seconds": 300,
+      "wall_clock_seconds": 360.010680587,
+      "total_requests": 3000,
+      "achieved_rps": 8.333086104857996,
+      "ok": 2926,
+      "timeouts": 51,
+      "http_errors": 0,
+      "client_errors": 23,
+      "latency_p50": 5.449736070999961,
+      "latency_p95": 97.88053619300013,
+      "latency_p99": 116.30077568899992,
+      "latency_max": 120.91709010700015
+    },
+    "server": {
+      "vllm_call_p50": 0.8569325153374233,
+      "vllm_call_p95": 4.770958083832333,
+      "calls_per_second": 24.884035901502443,
+      "queue_mean": 2.6918552877655403e-05,
+      "prefill_mean": 0.05056768831894971,
+      "decode_mean": 0.9807860234561497,
+      "unaccounted_mean": 1.5826783795359995,
+      "running": 0.0,
+      "waiting": 0.0,
+      "batch_tokens_p95": 1081.4472148541097,
+      "output_tokens_p95": 131.83673469387753,
+      "kv_used": 0.006963738047988444,
+      "prefix_hit_rate": 0.9262991556131721,
+      "finished_length_share": 0.0015510434292160182,
+      "preemptions_per_second": 0.0,
+      "scrape_success_percent": 75.0,
+      "calls_per_run": 2.986172900217079,
+      "agent_overhead_p50": 2.8907874163844913
+    },
+    "failures": [
+      "51x timeout",
+      "19x ClientOSError: [Errno 104] Connection reset by peer",
+      "4x ServerDisconnectedError: Server disconnected"
+    ],
+    "passed": false,
+    "when": "2026-08-21T14:30:05"
+  },
+  {
+    "config": {
+      "agent_workers": "2",
+      "cpu_count": "16",
+      "api_server_count": "4",
+      "max_num_seqs": "256",
+      "max_iterations": "3",
+      "schema_values": "off",
+      "label": "workers-2"
+    },
+    "client": {
+      "label": "workers-2",
+      "requested_rps": 10.0,
+      "duration_seconds": 300,
+      "wall_clock_seconds": 360.00460457999975,
+      "total_requests": 3000,
+      "achieved_rps": 8.33322674719663,
+      "ok": 1529,
+      "timeouts": 864,
+      "http_errors": 0,
+      "client_errors": 607,
+      "latency_p50": 1.9210492199999862,
+      "latency_p95": 111.80462112600026,
+      "latency_p99": 117.6360099880003,
+      "latency_max": 120.69970915300019
+    },
+    "server": {
+      "vllm_call_p50": 0.6967709384460142,
+      "vllm_call_p95": 4.603773584905669,
+      "calls_per_second": 16.400000000000002,
+      "queue_mean": 1.1160429767567433e-05,
+      "prefill_mean": 0.04069130841101844,
+      "decode_mean": 0.7449456436779601,
+      "unaccounted_mean": 2.2352031084538537,
+      "running": 28.5,
+      "waiting_peak": 0.0,
+      "batch_tokens_p95": 976.9795918367352,
+      "output_tokens_p95": 122.10526315789485,
+      "kv_used": 0.06364784412772861,
+      "prefix_hit_rate": 0.925994606808912,
+      "finished_length_share": 0.0011291779584462508,
+      "preemptions_per_second": 0.0,
+      "scrape_success_percent": 63.1578947368421,
+      "calls_per_run": 1.9680251717039987,
+      "agent_overhead_p50": 0.5497864742264127,
+      "cpu": {
+        "cores": 16.0,
+        "box_busy_cores": 11.71,
+        "vllm_cores": 0.43,
+        "agent_cores": 1.94
+      }
+    },
+    "failures": [
+      "864x timeout",
+      "607x ServerDisconnectedError: Server disconnected"
+    ],
+    "passed": false,
+    "when": "2026-08-21T14:40:50"
+  },
+  {
+    "config": {
+      "agent_workers": "1",
+      "cpu_count": "16",
+      "api_server_count": "4",
+      "max_num_seqs": "256",
+      "max_iterations": "3",
+      "schema_values": "off",
+      "langfuse": "on",
+      "label": "rps-5"
+    },
+    "client": {
+      "label": "rps-5",
+      "requested_rps": 5.0,
+      "duration_seconds": 300,
+      "wall_clock_seconds": 360.04125180100027,
+      "total_requests": 1500,
+      "achieved_rps": 4.166189269970293,
+      "ok": 1495,
+      "timeouts": 2,
+      "http_errors": 0,
+      "client_errors": 3,
+      "latency_p50": 1.7802156479997393,
+      "latency_p95": 21.892665323000074,
+      "latency_p99": 31.706441324000025,
+      "latency_max": 75.19127351700035
+    },
+    "server": {
+      "vllm_call_p50": 0.47683486238532113,
+      "vllm_call_p95": 1.4567567567567572,
+      "calls_per_second": 12.828115186369073,
+      "queue_mean": 7.022547594846783e-06,
+      "prefill_mean": 0.02621663432357495,
+      "decode_mean": 0.5502070946791615,
+      "unaccounted_mean": 0.10657184212609172,
+      "running": 7.631578947368421,
+      "waiting_peak": 0.0,
+      "batch_tokens_p95": 331.5569942196526,
+      "output_tokens_p95": 130.67961165048533,
+      "kv_used": 0.03918455709904389,
+      "prefix_hit_rate": 0.9168617674890464,
+      "finished_length_share": 0.0024617067833698028,
+      "preemptions_per_second": 0.0,
+      "scrape_success_percent": 95.0,
+      "calls_per_run": 3.0791004332984957,
+      "agent_overhead_p50": 0.31199321661726853,
+      "cpu": {
+        "cores": 16.0,
+        "box_busy_cores": 13.5,
+        "vllm_cores": 2.39,
+        "agent_cores": 3.98,
+        "driver_cores": 0,
+        "top": [
+          {
+            "name": "python3",
+            "cores": 3.09
+          },
+          {
+            "name": "python3",
+            "cores": 2.04
+          },
+          {
+            "name": "python3",
+            "cores": 1.95
+          },
+          {
+            "name": "VLLM::Worker",
+            "cores": 1.57
+          },
+          {
+            "name": "python3",
+            "cores": 0.98
+          },
+          {
+            "name": "python3",
+            "cores": 0.98
+          }
+        ]
+      }
+    },
+    "failures": [
+      "2x timeout",
+      "2x ServerDisconnectedError: Server disconnected",
+      "1x ClientOSError: [Errno 104] Connection reset by peer"
+    ],
+    "passed": false,
+    "when": "2026-08-21T14:52:59"
+  },
+  {
+    "config": {
+      "agent_workers": "1",
+      "cpu_count": "16",
+      "api_server_count": "4",
+      "max_num_seqs": "256",
+      "max_iterations": "3",
+      "schema_values": "off",
+      "langfuse": "on",
+      "label": "rps-3"
+    },
+    "client": {
+      "label": "rps-3",
+      "requested_rps": 3.0,
+      "duration_seconds": 300,
+      "wall_clock_seconds": 301.288757585,
+      "total_requests": 900,
+      "achieved_rps": 2.987167550538592,
+      "ok": 896,
+      "timeouts": 2,
+      "http_errors": 0,
+      "client_errors": 2,
+      "latency_p50": 1.1050327310003922,
+      "latency_p95": 7.660215261000303,
+      "latency_p99": 36.94025032000036,
+      "latency_max": 72.90682227399975
+    },
+    "server": {
+      "vllm_call_p50": 0.38999999999999996,
+      "vllm_call_p95": 1.1264705882352943,
+      "calls_per_second": 9.256075395962133,
+      "queue_mean": 6.5985564716322965e-06,
+      "prefill_mean": 0.02205705550341698,
+      "decode_mean": 0.43239062738438383,
+      "unaccounted_mean": 0.00656246308911887,
+      "running": 3.35,
+      "waiting_peak": 0.0,
+      "batch_tokens_p95": 15.97119999999969,
+      "output_tokens_p95": 131.9374999999998,
+      "kv_used": 0.018545913765109168,
+      "prefix_hit_rate": 0.9175583185119003,
+      "finished_length_share": 0.001516300227445034,
+      "preemptions_per_second": 0.0,
+      "scrape_success_percent": 100.0,
+      "calls_per_run": 3.0986127290694645,
+      "agent_overhead_p50": -0.10342623333669887,
+      "cpu": {
+        "cores": 15.9,
+        "box_busy_cores": 12.47,
+        "vllm_cores": 2.98,
+        "agent_cores": 3.34,
+        "driver_cores": 0,
+        "top": [
+          {
+            "name": "python3",
+            "cores": 2.97
+          },
+          {
+            "name": "python3",
+            "cores": 1.98
+          },
+          {
+            "name": "VLLM::Worker",
+            "cores": 1.74
+          },
+          {
+            "name": "python3",
+            "cores": 1.36
+          },
+          {
+            "name": "python3",
+            "cores": 1.0
+          },
+          {
+            "name": "python3",
+            "cores": 1.0
+          }
+        ]
+      }
+    },
+    "failures": [
+      "2x ClientOSError: [Errno 104] Connection reset by peer",
+      "2x timeout"
+    ],
+    "passed": false,
+    "when": "2026-08-21T15:01:44"
+  },
+  {
+    "config": {
+      "agent_workers": "1",
+      "cpu_count": "16",
+      "api_server_count": "4",
+      "max_num_seqs": "256",
+      "max_iterations": "2",
+      "schema_values": "off",
+      "langfuse": "on",
+      "label": "iters-2"
+    },
+    "client": {
+      "label": "iters-2",
+      "requested_rps": 3.0,
+      "duration_seconds": 300,
+      "wall_clock_seconds": 300.62111926800026,
+      "total_requests": 900,
+      "achieved_rps": 2.9938016403886127,
+      "ok": 889,
+      "timeouts": 3,
+      "http_errors": 0,
+      "client_errors": 8,
+      "latency_p50": 1.2135954269997455,
+      "latency_p95": 6.7916572539998015,
+      "latency_p99": 38.07531696099977,
+      "latency_max": 58.864595514999564
+    },
+    "server": {
+      "vllm_call_p50": 0.3315696649029982,
+      "vllm_call_p95": 0.9436274509803921,
+      "calls_per_second": 7.70170033894499,
+      "queue_mean": 8.272843731400596e-06,
+      "prefill_mean": 0.01852316036400884,
+      "decode_mean": 0.37319177641275725,
+      "unaccounted_mean": 0.005786234492432323,
+      "running": 4.0,
+      "waiting_peak": 0.0,
+      "batch_tokens_p95": 7.780614945618459,
+      "output_tokens_p95": 115.8256880733944,
+      "kv_used": 0.01980876781526253,
+      "prefix_hit_rate": 0.9670092056805201,
+      "finished_length_share": 0.001366742596810934,
+      "preemptions_per_second": 0.0,
+      "scrape_success_percent": 100.0,
+      "calls_per_run": 2.5725486401782,
+      "agent_overhead_p50": 0.360616336429196,
+      "cpu": {
+        "cores": 15.9,
+        "box_busy_cores": 11.54,
+        "vllm_cores": 2.87,
+        "agent_cores": 3.35,
+        "driver_cores": 0,
+        "top": [
+          {
+            "name": "python3",
+            "cores": 1.99
+          },
+          {
+            "name": "python3",
+            "cores": 1.99
+          },
+          {
+            "name": "VLLM::Worker",
+            "cores": 1.73
+          },
+          {
+            "name": "python3",
+            "cores": 1.36
+          },
+          {
+            "name": "python3",
+            "cores": 1.0
+          },
+          {
+            "name": "python3",
+            "cores": 1.0
+          }
+        ]
+      }
+    },
+    "failures": [
+      "8x ClientOSError: [Errno 104] Connection reset by peer",
+      "3x timeout"
+    ],
+    "passed": false,
+    "when": "2026-08-21T15:23:13"
+  },
+  {
+    "config": {
+      "agent_workers": "1",
+      "cpu_count": "16",
+      "api_server_count": "4",
+      "max_num_seqs": "256",
+      "max_iterations": "3",
+      "schema_values": "off",
+      "langfuse": "on",
+      "label": "query-budget"
+    },
+    "client": {
+      "label": "query-budget",
+      "requested_rps": 10.0,
+      "duration_seconds": 300,
+      "wall_clock_seconds": 360.00322867399973,
+      "total_requests": 3000,
+      "achieved_rps": 8.33325859617955,
+      "ok": 1076,
+      "timeouts": 1319,
+      "http_errors": 0,
+      "client_errors": 605,
+      "latency_p50": 1.8608772960005808,
+      "latency_p95": 94.98224831300013,
+      "latency_p99": 98.89117590600017,
+      "latency_max": 102.91024195799946
+    },
+    "server": {
+      "vllm_call_p50": 0.6264064293915039,
+      "vllm_call_p95": 3.1805555555555176,
+      "calls_per_second": 12.505263157894735,
+      "queue_mean": 7.92369809328392e-06,
+      "prefill_mean": 0.03259120732379587,
+      "decode_mean": 0.6772900109537044,
+      "unaccounted_mean": 1.7345736179526763,
+      "running": 19.636363636363637,
+      "waiting_peak": 0.0,
+      "batch_tokens_p95": 718.5151364764255,
+      "output_tokens_p95": 127.87564766839355,
+      "kv_used": 0.047086415298574824,
+      "prefix_hit_rate": 0.9301984005557531,
+      "finished_length_share": 0.001122334455667789,
+      "preemptions_per_second": 0.0,
+      "scrape_success_percent": 55.00000000000001,
+      "calls_per_run": 1.5006450374200406,
+      "agent_overhead_p50": 0.9208635963262134,
+      "cpu": {
+        "cores": 15.9,
+        "box_busy_cores": 9.53,
+        "vllm_cores": 1.97,
+        "agent_cores": 2.43,
+        "driver_cores": 0,
+        "top": [
+          {
+            "name": "python3",
+            "cores": 1.98
+          },
+          {
+            "name": "python3",
+            "cores": 1.98
+          },
+          {
+            "name": "VLLM::Worker",
+            "cores": 1.41
+          },
+          {
+            "name": "python3",
+            "cores": 1.0
+          },
+          {
+            "name": "python3",
+            "cores": 1.0
+          },
+          {
+            "name": "clickhouse-serv",
+            "cores": 0.66
+          }
+        ]
+      }
+    },
+    "failures": [
+      "1319x timeout",
+      "601x ServerDisconnectedError: Server disconnected",
+      "4x ClientOSError: [Errno 104] Connection reset by peer"
+    ],
+    "passed": false,
+    "when": "2026-08-21T15:46:22"
+  },
+  {
+    "config": {
+      "agent_workers": "1",
+      "cpu_count": "16",
+      "api_server_count": "4",
+      "max_num_seqs": "256",
+      "max_iterations": "3",
+      "schema_values": "off",
+      "langfuse": "on",
+      "label": "rps-3-budget"
+    },
+    "client": {
+      "label": "rps-3-budget",
+      "requested_rps": 3.0,
+      "duration_seconds": 300,
+      "wall_clock_seconds": 301.5285556159997,
+      "total_requests": 900,
+      "achieved_rps": 2.984791931767023,
+      "ok": 900,
+      "timeouts": 0,
+      "http_errors": 0,
+      "client_errors": 0,
+      "latency_p50": 0.8228399210001953,
+      "latency_p95": 3.8823825310000757,
+      "latency_p99": 6.89788936000059,
+      "latency_max": 14.82600085300055
+    },
+    "server": {
+      "vllm_call_p50": 0.3711021505376344,
+      "vllm_call_p95": 0.9942553191489365,
+      "calls_per_second": 9.266601637883243,
+      "queue_mean": 5.6055187449216356e-06,
+      "prefill_mean": 0.02040490367210164,
+      "decode_mean": 0.41183771631427085,
+      "unaccounted_mean": 0.005353652261339805,
+      "running": 3.8,
+      "waiting_peak": 0.0,
+      "batch_tokens_p95": 7.985153881356901,
+      "output_tokens_p95": 125.79470198675489,
+      "kv_used": 0.04571531661555117,
+      "prefix_hit_rate": 0.9169767063898199,
+      "finished_length_share": 0.002271866717152594,
+      "preemptions_per_second": 0.0,
+      "scrape_success_percent": 100.0,
+      "calls_per_run": 3.104605563710879,
+      "agent_overhead_p50": -0.3292858802640166,
+      "cpu": {
+        "cores": 15.9,
+        "box_busy_cores": 10.14,
+        "vllm_cores": 3.06,
+        "agent_cores": 2.26,
+        "driver_cores": 0,
+        "top": [
+          {
+            "name": "python3",
+            "cores": 2.0
+          },
+          {
+            "name": "python3",
+            "cores": 1.99
+          },
+          {
+            "name": "VLLM::Worker",
+            "cores": 1.95
+          },
+          {
+            "name": "VLLM::EngineCor",
+            "cores": 1.0
+          },
+          {
+            "name": "python3",
+            "cores": 1.0
+          },
+          {
+            "name": "python3",
+            "cores": 1.0
+          }
+        ]
+      }
+    },
+    "failures": [],
+    "passed": true,
+    "when": "2026-08-21T15:56:18"
+  },
+  {
+    "config": {
+      "agent_workers": "1",
+      "cpu_count": "16",
+      "api_server_count": "8",
+      "max_num_seqs": "256",
+      "max_iterations": "3",
+      "schema_values": "off",
+      "langfuse": "on",
+      "label": "clean-baseline"
+    },
+    "client": {
+      "label": "clean-baseline",
+      "requested_rps": 10.0,
+      "duration_seconds": 300,
+      "wall_clock_seconds": 307.7044407820067,
+      "total_requests": 3000,
+      "achieved_rps": 9.749615547880087,
+      "ok": 3000,
+      "timeouts": 0,
+      "http_errors": 0,
+      "client_errors": 0,
+      "latency_p50": 1.2992803919914877,
+      "latency_p95": 6.041343021002831,
+      "latency_p99": 9.393839220996597,
+      "latency_max": 21.410586861995398
+    },
+    "server": {
+      "vllm_call_p50": 0.5599859681945744,
+      "vllm_call_p95": 1.5612157534246578,
+      "calls_per_second": 30.333120469330044,
+      "queue_mean": 5.245286891341399e-06,
+      "prefill_mean": 0.028712192284214438,
+      "decode_mean": 0.6308566654990087,
+      "unaccounted_mean": 0.008676874957370606,
+      "running": 18.15,
+      "waiting_peak": 0.0,
+      "batch_tokens_p95": 364.0169708929447,
+      "output_tokens_p95": 136.1408199643494,
+      "kv_used": 0.04134944975644961,
+      "prefix_hit_rate": 0.9162453538816351,
+      "finished_length_share": 0.0015037593984962405,
+      "preemptions_per_second": 0.0,
+      "scrape_success_percent": 100.0,
+      "calls_per_run": 3.1112119570628143,
+      "agent_overhead_p50": -0.44295464804286877,
+      "cpu": {
+        "cores": 15.9,
+        "box_busy_cores": 5.81,
+        "vllm_cores": 3.25,
+        "agent_cores": 0.79,
+        "driver_cores": 0,
+        "langfuse_cores": 1.11,
+        "top": [
+          {
+            "name": "VLLM::Worker",
+            "cores": 1.98
+          },
+          {
+            "name": "clickhouse-serv",
+            "cores": 1.02
+          },
+          {
+            "name": "VLLM::EngineCor",
+            "cores": 1.0
+          },
+          {
+            "name": "python3",
+            "cores": 0.79
+          },
+          {
+            "name": "MainThread",
+            "cores": 0.38
+          },
+          {
+            "name": "next-server (v1",
+            "cores": 0.09
+          }
+        ]
+      }
+    },
+    "failures": [],
+    "passed": false,
+    "when": "2026-08-22T10:08:45"
+  },
+  {
+    "config": {
+      "agent_workers": "1",
+      "cpu_count": "16",
+      "api_server_count": "8",
+      "max_num_seqs": "256",
+      "max_iterations": "2",
+      "schema_values": "off",
+      "langfuse": "on",
+      "label": "iters-2-clean"
+    },
+    "client": {
+      "label": "iters-2-clean",
+      "requested_rps": 10.0,
+      "duration_seconds": 300,
+      "wall_clock_seconds": 303.5412147629977,
+      "total_requests": 3000,
+      "achieved_rps": 9.883336608316514,
+      "ok": 3000,
+      "timeouts": 0,
+      "http_errors": 0,
+      "client_errors": 0,
+      "latency_p50": 1.1784879259939771,
+      "latency_p95": 3.780855431992677,
+      "latency_p99": 5.884788537994609,
+      "latency_max": 14.812537228004658
+    },
+    "server": {
+      "vllm_call_p50": 0.47981927710843375,
+      "vllm_call_p95": 1.3949930939226518,
+      "calls_per_second": 25.968421052631577,
+      "queue_mean": 4.771181733624066e-06,
+      "prefill_mean": 0.026468443862854983,
+      "decode_mean": 0.5364952305531621,
+      "unaccounted_mean": 0.007574137157820751,
+      "running": 14.35,
+      "waiting_peak": 0.0,
+      "batch_tokens_p95": 487.6616164460719,
+      "output_tokens_p95": 116.82160804020116,
+      "kv_used": 0.0326537975825365,
+      "prefix_hit_rate": 0.9211035216819399,
+      "finished_length_share": 0.0004053506282934738,
+      "preemptions_per_second": 0.0,
+      "scrape_success_percent": 100.0,
+      "calls_per_run": 2.627495357264264,
+      "agent_overhead_p50": -0.0822349969343279,
+      "cpu": {
+        "cores": 15.9,
+        "box_busy_cores": 5.39,
+        "vllm_cores": 3.16,
+        "agent_cores": 0.66,
+        "driver_cores": 0,
+        "langfuse_cores": 0.94,
+        "top": [
+          {
+            "name": "VLLM::Worker",
+            "cores": 1.99
+          },
+          {
+            "name": "VLLM::EngineCor",
+            "cores": 1.0
+          },
+          {
+            "name": "clickhouse-serv",
+            "cores": 0.88
+          },
+          {
+            "name": "python3",
+            "cores": 0.66
+          },
+          {
+            "name": "MainThread",
+            "cores": 0.36
+          },
+          {
+            "name": "next-server (v1",
+            "cores": 0.1
+          }
+        ]
+      }
+    },
+    "failures": [],
+    "passed": true,
+    "when": "2026-08-22T10:15:51",
+    "grafana": "http://localhost:3000/d/vllm-serving?from=1787393447614&to=1787393751411"
+  },
+  {
+    "config": {
+      "agent_workers": "1",
+      "cpu_count": "16",
+      "api_server_count": "8",
+      "max_num_seqs": "256",
+      "max_iterations": "2",
+      "schema_values": "off",
+      "langfuse": "on",
+      "label": "push-20"
+    },
+    "client": {
+      "label": "push-20",
+      "requested_rps": 20.0,
+      "duration_seconds": 300,
+      "wall_clock_seconds": 322.86532054501004,
+      "total_requests": 6000,
+      "achieved_rps": 18.583600090191638,
+      "ok": 6000,
+      "timeouts": 0,
+      "http_errors": 0,
+      "client_errors": 0,
+      "latency_p50": 20.160376366999117,
+      "latency_p95": 33.95513442798983,
+      "latency_p99": 36.808799114995054,
+      "latency_max": 47.733997666990035
+    },
+    "server": {
+      "vllm_call_p50": 0.6200086805555556,
+      "vllm_call_p95": 1.715362438220758,
+      "calls_per_second": 49.23123346502832,
+      "queue_mean": 6.412034020360577e-06,
+      "prefill_mean": 0.03308984954403307,
+      "decode_mean": 0.6821436009039339,
+      "unaccounted_mean": 0.009874402678107198,
+      "running": 32.85,
+      "waiting_peak": 0.0,
+      "batch_tokens_p95": 946.344407677034,
+      "output_tokens_p95": 121.14965986394556,
+      "kv_used": 0.05116362980335554,
+      "prefix_hit_rate": 0.9276456111225402,
+      "finished_length_share": 0.001354144394554914,
+      "preemptions_per_second": 0.0,
+      "scrape_success_percent": 100.0,
+      "calls_per_run": 2.6491763289187653,
+      "agent_overhead_p50": 18.51786404674718,
+      "cpu": {
+        "cores": 15.9,
+        "box_busy_cores": 7.03,
+        "vllm_cores": 3.26,
+        "agent_cores": 1.15,
+        "driver_cores": 0,
+        "langfuse_cores": 1.66,
+        "top": [
+          {
+            "name": "VLLM::Worker",
+            "cores": 1.98
+          },
+          {
+            "name": "clickhouse-serv",
+            "cores": 1.53
+          },
+          {
+            "name": "python3",
+            "cores": 1.15
+          },
+          {
+            "name": "VLLM::EngineCor",
+            "cores": 1.0
+          },
+          {
+            "name": "MainThread",
+            "cores": 0.61
+          },
+          {
+            "name": "next-server (v1",
+            "cores": 0.16
+          }
+        ]
+      }
+    },
+    "failures": [],
+    "passed": false,
+    "when": "2026-08-22T10:21:44",
+    "grafana": "http://localhost:3000/d/vllm-serving?from=1787393780948&to=1787394104064"
+  },
+  {
+    "config": {
+      "agent_workers": "1",
+      "cpu_count": "16",
+      "api_server_count": "8",
+      "max_num_seqs": "256",
+      "max_iterations": "2",
+      "schema_values": "off",
+      "langfuse": "on",
+      "label": "async-20"
+    },
+    "client": {
+      "label": "async-20",
+      "requested_rps": 20.0,
+      "duration_seconds": 300,
+      "wall_clock_seconds": 305.30669090599986,
+      "total_requests": 6000,
+      "achieved_rps": 19.652369825878875,
+      "ok": 6000,
+      "timeouts": 0,
+      "http_errors": 0,
+      "client_errors": 0,
+      "latency_p50": 1.600378338000155,
+      "latency_p95": 4.950420569992275,
+      "latency_p99": 7.863858415003051,
+      "latency_max": 17.23748116500792
+    },
+    "server": {
+      "vllm_call_p50": 0.6343954248366013,
+      "vllm_call_p95": 1.762304409672829,
+      "calls_per_second": 52.0138525829734,
+      "queue_mean": 6.000201172760865e-06,
+      "prefill_mean": 0.03259535887421619,
+      "decode_mean": 0.6989145510798579,
+      "unaccounted_mean": 0.01034891513052732,
+      "running": 35.75,
+      "waiting_peak": 0.0,
+      "batch_tokens_p95": 857.1391847664405,
+      "output_tokens_p95": 121.80203045685262,
+      "kv_used": 0.05430272415659387,
+      "prefix_hit_rate": 0.9342652872170719,
+      "finished_length_share": 0.0018888289260658392,
+      "preemptions_per_second": 0.0,
+      "scrape_success_percent": 100.0,
+      "calls_per_run": 2.646696202230017,
+      "agent_overhead_p50": -0.07867362362697583,
+      "cpu": {
+        "cores": 15.9,
+        "box_busy_cores": 7.28,
+        "vllm_cores": 3.32,
+        "agent_cores": 1.29,
+        "driver_cores": 0,
+        "langfuse_cores": 1.74,
+        "top": [
+          {
+            "name": "VLLM::Worker",
+            "cores": 1.98
+          },
+          {
+            "name": "clickhouse-serv",
+            "cores": 1.62
+          },
+          {
+            "name": "python3",
+            "cores": 1.29
+          },
+          {
+            "name": "VLLM::EngineCor",
+            "cores": 1.01
+          },
+          {
+            "name": "MainThread",
+            "cores": 0.6
+          },
+          {
+            "name": "next-server (v1",
+            "cores": 0.15
+          }
+        ]
+      }
+    },
+    "failures": [],
+    "passed": true,
+    "when": "2026-08-22T10:32:32",
+    "grafana": "http://localhost:3000/d/vllm-serving?from=1787394447063&to=1787394752614"
+  },
+  {
+    "config": {
+      "agent_workers": "1",
+      "cpu_count": "16",
+      "api_server_count": "8",
+      "max_num_seqs": "256",
+      "max_iterations": "2",
+      "schema_values": "off",
+      "langfuse": "on",
+      "label": "async-10"
+    },
+    "client": {
+      "label": "async-10",
+      "requested_rps": 10.0,
+      "duration_seconds": 300,
+      "wall_clock_seconds": 302.44945816999825,
+      "total_requests": 3000,
+      "achieved_rps": 9.919012644796293,
+      "ok": 3000,
+      "timeouts": 0,
+      "http_errors": 0,
+      "client_errors": 0,
+      "latency_p50": 1.1984875089983689,
+      "latency_p95": 4.087905791995581,
+      "latency_p99": 6.581301668993547,
+      "latency_max": 14.940621686997474
+    },
+    "server": {
+      "vllm_call_p50": 0.48438661710037173,
+      "vllm_call_p95": 1.4085851648351642,
+      "calls_per_second": 25.901845269632528,
+      "queue_mean": 4.562806585174462e-06,
+      "prefill_mean": 0.02650226404473826,
+      "decode_mean": 0.5482125036547718,
+      "unaccounted_mean": 0.007788291280486893,
+      "running": 15.7,
+      "waiting_peak": 0.0,
+      "batch_tokens_p95": 484.24676497141195,
+      "output_tokens_p95": 116.77333333333297,
+      "kv_used": 0.043730831679595905,
+      "prefix_hit_rate": 0.9209990001734251,
+      "finished_length_share": 0.00135464643727987,
+      "preemptions_per_second": 0.0,
+      "scrape_success_percent": 100.0,
+      "calls_per_run": 2.61133302246783,
+      "agent_overhead_p50": -0.06640725987731222,
+      "cpu": {
+        "cores": 15.9,
+        "box_busy_cores": 5.32,
+        "vllm_cores": 3.16,
+        "agent_cores": 0.71,
+        "driver_cores": 0,
+        "langfuse_cores": 0.84,
+        "top": [
+          {
+            "name": "VLLM::Worker",
+            "cores": 1.98
+          },
+          {
+            "name": "VLLM::EngineCor",
+            "cores": 1.0
+          },
+          {
+            "name": "clickhouse-serv",
+            "cores": 0.78
+          },
+          {
+            "name": "python3",
+            "cores": 0.71
+          },
+          {
+            "name": "MainThread",
+            "cores": 0.34
+          },
+          {
+            "name": "next-server (v1",
+            "cores": 0.1
+          }
+        ]
+      }
+    },
+    "failures": [],
+    "passed": true,
+    "when": "2026-08-22T10:37:54",
+    "grafana": "http://localhost:3000/d/vllm-serving?from=1787394771781&to=1787395074464"
+  },
+  {
+    "config": {
+      "agent_workers": "1",
+      "cpu_count": "16",
+      "api_server_count": "8",
+      "max_num_seqs": "256",
+      "max_iterations": "2",
+      "schema_values": "off",
+      "langfuse": "on",
+      "label": "async-30"
+    },
+    "client": {
+      "label": "async-30",
+      "requested_rps": 30.0,
+      "duration_seconds": 300,
+      "wall_clock_seconds": 360.0066296179866,
+      "total_requests": 9000,
+      "achieved_rps": 24.999539618340247,
+      "ok": 3261,
+      "timeouts": 3913,
+      "http_errors": 0,
+      "client_errors": 1826,
+      "latency_p50": 45.65589820900641,
+      "latency_p95": 108.78141421799955,
+      "latency_p99": 117.11100044300838,
+      "latency_max": 120.33356480899965
+    },
+    "server": {
+      "vllm_call_p50": 1.3545520934761441,
+      "vllm_call_p95": 4.559685154295246,
+      "calls_per_second": 42.27017543859649,
+      "queue_mean": 0.33615425145334854,
+      "prefill_mean": 0.08786063763130902,
+      "decode_mean": 1.1866691247132357,
+      "unaccounted_mean": 0.0304681835507892,
+      "running": 49.25,
+      "waiting_peak": 245.0,
+      "batch_tokens_p95": 543.0897989575574,
+      "output_tokens_p95": 120.60725552050471,
+      "kv_used": 0.12191953815623313,
+      "prefix_hit_rate": 0.9351394227416525,
+      "finished_length_share": 0.0017431725740848342,
+      "preemptions_per_second": 0.0,
+      "scrape_success_percent": 100.0,
+      "calls_per_run": 1.6908381547789024,
+      "agent_overhead_p50": 43.36556984672131,
+      "cpu": {
+        "cores": 15.7,
+        "box_busy_cores": 6.95,
+        "vllm_cores": 2.73,
+        "agent_cores": 1.76,
+        "driver_cores": 0,
+        "langfuse_cores": 1.72,
+        "top": [
+          {
+            "name": "python3",
+            "cores": 1.76
+          },
+          {
+            "name": "VLLM::Worker",
+            "cores": 1.66
+          },
+          {
+            "name": "clickhouse-serv",
+            "cores": 1.55
+          },
+          {
+            "name": "VLLM::EngineCor",
+            "cores": 0.78
+          },
+          {
+            "name": "MainThread",
+            "cores": 0.51
+          },
+          {
+            "name": "minio",
+            "cores": 0.16
+          }
+        ]
+      }
+    },
+    "failures": [
+      "3913x timeout",
+      "1822x ServerDisconnectedError: Server disconnected",
+      "4x ClientOSError: [Errno 104] Connection reset by peer"
+    ],
+    "passed": false,
+    "when": "2026-08-22T10:44:44",
+    "grafana": "http://localhost:3000/d/vllm-serving?from=1787395093757&to=1787395454173"
+  }
+]

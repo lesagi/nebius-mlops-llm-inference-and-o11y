@@ -1,0 +1,14 @@
+global:
+  # 5s was too aggressive: vLLM's /metrics is served by the API server process,
+  # which saturates under load, and scrapes timed out at the default (= interval).
+  # Measured 35% scrape success during a 10 rps run. Resolution is worth less than
+  # data. Re-measure scrape_duration_seconds and tighten if it lands well under 10s.
+  scrape_interval: 15s
+  scrape_timeout: 10s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: vllm
+    static_configs:
+      - targets: ['host.docker.internal:8000']
+    metrics_path: /metrics

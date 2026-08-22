@@ -1,0 +1,32 @@
+[project]
+name = "mlops-assignment"
+version = "0.1.0"
+description = "MLOps home assignment: LLM inference + observability"
+requires-python = ">=3.11"
+dependencies = [
+    # Serving
+    "vllm>=0.9.0,<0.11",
+    # Agent (major-version bounded; uv.lock pins exactly)
+    "langgraph>=1.0,<2.0",
+    "langchain>=1.0,<2.0",
+    "langchain-openai>=1.0,<2.0",
+    "langfuse>=4.0,<5.0",
+    # Server wrapper
+    "fastapi>=0.115,<1.0",
+    "uvicorn[standard]>=0.30,<1.0",
+    "pydantic>=2.0,<3.0",
+    # Data + utilities
+    "datasets>=2.20",
+    "python-dotenv>=1.0,<2.0",
+    "httpx>=0.27,<1.0",
+    "aiohttp>=3.9,<4.0",
+    "tqdm>=4.66,<5.0",
+    "transformers>=4.55.2,<5",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["agent", "evals", "load_test"]
